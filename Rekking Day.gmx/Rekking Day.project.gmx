@@ -13,7 +13,9 @@
     <sprite>sprites\ZombieDeath</sprite>
     <sprite>sprites\ZombieAttack</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\Prison</background>
+  </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\Tai</object>
