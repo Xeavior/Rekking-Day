@@ -23,6 +23,7 @@
     <object>objects\ZombieAI</object>
     <object>objects\ZombieCorpse</object>
     <object>objects\Phys</object>
+    <object>objects\Miss</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

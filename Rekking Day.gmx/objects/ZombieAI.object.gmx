@@ -102,6 +102,46 @@ hbtime = 1 * room_speed
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="bullet">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if random(201)&gt;2 and ds_list_find_index(other.hit_enemies,id) = -1
+    {
+    hp -= 20
+    hbtime_counter = hbtime
+    if hp &lt;= 0
+        {
+        instance_destroy()
+        }//end of 0 hp
+    with(other.id)
+        {
+        instance_destroy()
+        }//end of with
+    }//end of random
+else if ds_list_find_index(other.hit_enemies,id) = -1
+    {
+    instance_create(x,y,Miss)
+    ds_list_add(other.hit_enemies,id)
+    }//end of else
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="7" enumb="7">
       <action>
         <libid>1</libid>
