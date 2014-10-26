@@ -26,7 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>image_speed = .1
-
+//collision
+mass = 8
 hp = 100
 max_hp = 100
 hbtime_counter = 0
@@ -85,7 +86,7 @@ hbtime = 1 * room_speed
     //melee
     if distance_to_object(inst) &gt; 2 and sprite_index = zombie
         {
-    move_towards_point(inst.x,inst.y,1.5)
+            move_towards_point(inst.x,inst.y,1.5)
         }//end of if
     else
         {
@@ -134,7 +135,12 @@ hbtime = 1 * room_speed
     }//end of random
 else if ds_list_find_index(other.hit_enemies,id) = -1
     {
-    instance_create(x,y,Miss)
+    //I changed the "Miss" object to oEventText to be more dynamic and usable for other pop-up texts we may want to include
+    with(instance_create(x,y,oEventText))
+    {
+        image_blend = c_maroon
+        text = "Miss"
+    }
     ds_list_add(other.hit_enemies,id)
     }//end of else
 </string>

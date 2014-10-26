@@ -25,14 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Set fake "mass"
-mass=100000;
+            <string>//text = display text image_blend = color
+vspeed = -1
+alarm[0] = room_speed / 2
+text = ""
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="Phys">
+    <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -49,44 +51,13 @@ mass=100000;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Collision checks
-//new collision code I copied it from an official demo
-//Set up vars
-var a,xoff,yoff,om,mm,mag;
-
-a = point_direction(x, y, other.x, other.y);    //Get the direction from the colliding object
-xoff = lengthdir_x(1, a);                       //Get the offset vector
-yoff = lengthdir_y(1, a);
-om = other.mass / mass;                         //start the fake "physics mass" calculations
-mm = mass / other.mass;
-mag = sqrt((om * om) + (mm * mm));
-om /= mag;
-mm /= mag;
-
-//Move out of collision
-while (place_meeting(x, y, other.id))
-{
-x -= xoff * om; //Move the instance out of collision
-y -= yoff * om;
-other.x += xoff * mm; //Move the other instance out of the collision
-other.y += yoff * mm;
-}
-/*
-//old collision code
-if xprevious != x or yprevious != y
-{
-    while(collision_rectangle(bbox_left,bbox_top,bbox_right,bbox_bottom,Phys,true,true))
-    {
-        x-=hspeed
-        y-=vspeed
-    }
-}
+            <string>instance_destroy()
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="bullet">
+    <event eventtype="8" enumb="73">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -103,9 +74,7 @@ if xprevious != x or yprevious != y
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//so walls destroy bullets
-with(other.id)
-    instance_destroy()
+            <string>draw_text_colour(x,y,text,image_blend,image_blend,image_blend,image_blend,1)
 </string>
           </argument>
         </arguments>
