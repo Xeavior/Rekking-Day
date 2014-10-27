@@ -32,7 +32,7 @@ hp = 100
 max_hp = 100
 hbtime_counter = 0
 hbtime = 1 * room_speed
-
+path = path_add() //create a path for zombies to follow
 </string>
           </argument>
         </arguments>
@@ -86,10 +86,12 @@ hbtime = 1 * room_speed
     //melee
     if distance_to_object(inst) &gt; 2 and sprite_index = zombie
         {
-            move_towards_point(inst.x,inst.y,1.5)
+            mp_grid_path(global.wallGrid,path,x,y,inst.x,inst.y,true) //set path to a path avoiding walls
+            path_start(path,1.5,0,false) // begin path
         }//end of if
     else
         {
+        path_end()
         direction = point_direction(x,y,inst.x,inst.y)
         sprite_index = ZombieAttack     
         speed = 0
