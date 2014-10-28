@@ -14,6 +14,7 @@
     <sprite>sprites\ZombieAttack</sprite>
     <sprite>sprites\sWall</sprite>
     <sprite>sprites\sMoney</sprite>
+    <sprite>sprites\sDoor</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\Prison</background>
@@ -28,12 +29,13 @@
     <object>objects\oEventText</object>
     <object>objects\oWall</object>
     <object>objects\oMoney</object>
+    <object>objects\oDoor</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41939.0270097917</constant>
+    <constant name="GM_build_date">41940.1221502431</constant>
     <constant name="GM_version">'100'</constant>
   </constants>
   <help>
