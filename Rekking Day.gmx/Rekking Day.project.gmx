@@ -20,8 +20,12 @@
     <background>background\Prison</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\add_score.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\Tai</object>
+    <object>objects\oPlayer</object>
     <object>objects\bullet</object>
     <object>objects\ZombieAI</object>
     <object>objects\ZombieCorpse</object>
@@ -30,12 +34,13 @@
     <object>objects\oWall</object>
     <object>objects\oMoney</object>
     <object>objects\oDoor</object>
+    <object>objects\oController</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41940.1221502431</constant>
+    <constant name="GM_build_date">41949.0948914468</constant>
     <constant name="GM_version">'100'</constant>
   </constants>
   <help>
