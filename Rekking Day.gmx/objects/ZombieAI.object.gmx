@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = .1
+            <string>image_speed = .2
 //collision
 mass = 8
 hp = 100
@@ -93,7 +93,8 @@ path = path_add() //create a path for zombies to follow
         {
         path_end()
         direction = point_direction(x,y,inst.x,inst.y)
-        sprite_index = ZombieAttack     
+        sprite_index = ZombieAttack
+        image_speed = .3     
         speed = 0
         }//end of else          
     image_angle = direction - 90
@@ -141,7 +142,7 @@ path = path_add() //create a path for zombies to follow
             }
         }// I added a critical hit chance.
 
-else if random(201)&gt;10 and ds_list_find_index(other.hit_enemies,id) = -1
+else if random(201)&gt;7 and ds_list_find_index(other.hit_enemies,id) = -1
     { 
     hp -= 20
     hbtime_counter = hbtime
@@ -189,6 +190,7 @@ else if ds_list_find_index(other.hit_enemies,id) = -1
             <string>if sprite_index = ZombieAttack
     {
     sprite_index = zombie
+    image_speed = .2
     var inst = collision_circle(x+lengthdir_x(5,direction),y+lengthdir_y(5,direction),25,Tai,false,false)
     if instance_exists(inst)
         {
