@@ -33,6 +33,7 @@ max_hp = 100
 hbtime_counter = 0
 hbtime = 1 * room_speed
 path = path_add() //create a path for zombies to follow
+point_value = 1
 </string>
           </argument>
         </arguments>
@@ -59,6 +60,8 @@ path = path_add() //create a path for zombies to follow
     {
     image_angle = other.image_angle
     }
+add_score(point_value)
+
 </string>
           </argument>
         </arguments>
@@ -81,7 +84,7 @@ path = path_add() //create a path for zombies to follow
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var inst=instance_nearest(x,y,Tai)
+            <string>var inst=instance_nearest(x,y,oPlayer)
     {
     //melee
     if distance_to_object(inst) &gt; 2 and sprite_index = zombie
@@ -190,8 +193,12 @@ else if ds_list_find_index(other.hit_enemies,id) = -1
             <string>if sprite_index = ZombieAttack
     {
     sprite_index = zombie
+<<<<<<< HEAD
     image_speed = .2
     var inst = collision_circle(x+lengthdir_x(5,direction),y+lengthdir_y(5,direction),25,Tai,false,false)
+=======
+    var inst = collision_circle(x+lengthdir_x(5,direction),y+lengthdir_y(5,direction),25,oPlayer,false,false)
+>>>>>>> origin/master
     if instance_exists(inst)
         {
         inst.hp -= 20

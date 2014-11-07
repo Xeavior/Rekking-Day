@@ -95,6 +95,14 @@ mp_grid_add_instances(global.wallGrid,oWall,1)</code>
     <instance objName="oWall" x="48" y="16" name="inst_F1B00B09" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oWall" x="80" y="16" name="inst_E4E0E033" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oWall" x="112" y="16" name="inst_4E1893B9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+<<<<<<< HEAD
+=======
+    <instance objName="oWall" x="144" y="16" name="inst_2152D392" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oWall" x="176" y="16" name="inst_C5AE4E02" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oWall" x="208" y="16" name="inst_500F9437" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oDoor" x="240" y="112" name="inst_5B5E0679" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oController" x="512" y="96" name="inst_4F96999D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+>>>>>>> origin/master
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
