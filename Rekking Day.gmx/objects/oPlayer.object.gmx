@@ -35,7 +35,7 @@ knockbackdirection = 0
 //health
 hp = 100
 max_hp = 100
-
+image_speed = .25
 money = 0
 </string>
           </argument>
@@ -102,7 +102,7 @@ else if keyboard_check(ord("A"))
      }
     }//end of movement
 //shooting
-if x != xprevious or y != yprevious 
+/*if x != xprevious or y != yprevious 
     {
     sprite_index = rek1
     image_speed = .25
@@ -111,13 +111,14 @@ else if !keyboard_check(vk_space)
     {
     image_speed = 0
     image_index = 0
-    }
+    }*/
 if cooldown&gt;0
     {
     cooldown--
     }
 if keyboard_check(vk_space) and cooldown&lt;=0
     {
+    //slow down player if moving and shooting
     sprite_index = rek1shoot 
     image_speed = .08
     image_index = 0       
@@ -131,6 +132,23 @@ if keyboard_check(vk_space) and cooldown&lt;=0
         }
     cooldown = room_speed / 2
     }//end of shooting
+    else if !keyboard_check(vk_space)
+    {
+        sprite_index = rek1
+        if x != xprevious or y != yprevious 
+        image_speed = .25
+        else
+        {
+        image_speed = 0
+        image_index = 0
+        }
+    }
+    else
+    {
+    //slow down player if space is pressed aka player is shooting
+    x -= (x-xprevious)/2
+    y -= (y-yprevious)/2
+    }
 //knock back
 x += lengthdir_x(knockback, knockbackdirection)
 y += lengthdir_y(knockback, knockbackdirection)
