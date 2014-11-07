@@ -7,7 +7,6 @@
   <persistent>0</persistent>
   <parentName>oPlayer</parentName>
   <maskName>&lt;undefined&gt;</maskName>
-<<<<<<< HEAD
   <events>
     <event eventtype="0" enumb="0">
       <action>
@@ -256,9 +255,7 @@ if knockback &gt; 0
       </action>
     </event>
   </events>
-=======
   <events/>
->>>>>>> origin/master
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>
