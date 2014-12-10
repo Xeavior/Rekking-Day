@@ -74,9 +74,10 @@ onGround = false //variable used to determine if the zombie should be drawn befo
             <kind>1</kind>
             <string>image_speed = 0
 image_index = 4
-alarm[0] = 2 * room_speed;
+alarm[1] = 2 * room_speed;
 (instance_create(x,y,oMoney)).amount=irandom(5)+5; // create an oMoney object with a random amount from 1-20
 onGround = true
+
 </string>
           </argument>
         </arguments>
